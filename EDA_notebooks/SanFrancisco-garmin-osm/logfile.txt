@@ -1,0 +1,230 @@
+>>> Run splitter
++ java -jar /var/lib/bbbike/opt/splitter/splitter.jar --version
+splitter 652 compiled 2022-06-17T08:25:16+0100
++ time nice -n1 java -Xmx3G -jar /var/lib/bbbike/opt/splitter/splitter.jar --max-areas=512 --max-nodes=1000000 --mapid=25590001 --max-threads=3 --output-dir=/bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Splitter version 652 compiled 2022-06-17T08:25:16+0100
+boundary-tags=use-exclude-list
+cache=
+description=
+geonames-file=
+handle-element-version=remove
+ignore-osm-bounds=false
+keep-complete=true
+mapid=25590001
+max-areas=512
+max-nodes=1000000
+max-threads=3
+mixed=false
+no-trim=false
+num-tiles=
+output=pbf
+output-dir=/bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split
+overlap=auto
+polygon-desc-file=
+polygon-file=
+precomp-sea=
+problem-file=
+problem-report=
+resolution=13
+route-rel-values=
+search-limit=200000
+split-file=
+status-freq=120
+stop-after=dist
+wanted-admin-level=5
+write-kml=
+Elapsed time: 0s   Memory: Current 1776MB (4MB used, 1772MB free) Max 3072MB
+Time started: Mon Feb 06 07:03:11 UTC 2023
+Map is being split for resolution 13:
+ - area boundaries are aligned to 0x800 map units (0.0439453125 degrees)
+ - areas are multiples of 0x800 map units wide and high
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Fill-densities-map pass took 2678 ms
+Exact map coverage read from input file(s) is (37.54000425338745,-122.54000186920166) to (37.92999744415283,-122.31999635696411)
+Rounded map coverage is (37.529296875,-122.5634765625) to (37.96875,-122.2998046875)
+Splitting nodes into areas containing a maximum of 1,000,000 nodes each...
+Highest node count in a single grid element is 400,131
+Solving partition (37.529296875,-122.5634765625) to (37.96875,-122.2998046875) with 3,399,577 nodes
+Splitting tile (37.529296875,-122.5634765625) to (37.96875,-122.2998046875) with 3,399,577 nodes, goal is to get near 4 tiles
+S2 FULL: step 1 goal: 4 tiles, now: 7 tile(s). The smallest node count is 258226 (25 %), cache size 0
+S2 FULL: step 2 goal: 4 tiles, now: 5 tile(s). The smallest node count is 575760 (57 %), cache size 0
+S2 FULL goal was 4 tiles, solver finished with : 5 tile(s). The smallest node count is 575760 (57 %)
+Solution is nice. Can't find a better solution with search-limit 200000: 5 tile(s). The smallest node count is 575760 (57 %)
+Final solution: 5 tile(s). The smallest node count is 575760 (57 %)
+This seems to be nice.
+Area 25590001 covers (37.529296875,-122.5634765625) to (37.6611328125,-122.2998046875) and contains 746347 nodes (74 %)
+Area 25590002 covers (37.79296875,-122.5634765625) to (37.96875,-122.2998046875) and contains 575760 nodes (57 %)
+Area 25590003 covers (37.6611328125,-122.431640625) to (37.79296875,-122.2998046875) and contains 649157 nodes (64 %)
+Area 25590004 covers (37.7490234375,-122.5634765625) to (37.79296875,-122.431640625) and contains 644029 nodes (64 %)
+Area 25590005 covers (37.6611328125,-122.5634765625) to (37.7490234375,-122.431640625) and contains 784284 nodes (78 %)
+Creating the initial areas took 585 ms
+5 areas:
+Area 25590001: 1748992,-5711872 to 1755136,-5699584 covers (0x1ab000,0xffa8d800) to (0x1ac800,0xffa90800)
+Area 25590002: 1761280,-5711872 to 1769472,-5699584 covers (0x1ae000,0xffa8d800) to (0x1b0000,0xffa90800)
+Area 25590003: 1755136,-5705728 to 1761280,-5699584 covers (0x1ac800,0xffa8f000) to (0x1ae000,0xffa90800)
+Area 25590004: 1759232,-5711872 to 1761280,-5705728 covers (0x1ad800,0xffa8d800) to (0x1ae000,0xffa8f000)
+Area 25590005: 1755136,-5711872 to 1759232,-5705728 covers (0x1ac800,0xffa8d800) to (0x1ad800,0xffa8f000)
+Generating problem list for 5 distinct areas
+Processing 5 areas in a single pass
+Pseudo areas:
+Pseudo area -6 covers (37.96875,-180.0) to (90.0,180.0)
+Pseudo area -7 covers (-90.0,-180.0) to (37.529296875,180.0)
+Pseudo area -8 covers (37.529296875,-180.0) to (37.96875,-122.5634765625)
+Pseudo area -9 covers (37.529296875,-122.2998046875) to (37.96875,180.0)
+cached 11 combinations of areas that form rectangles.
+AreaGridTree [512][512] for grid area (-90.0,-180.0) to (90.0,180.0) requires max. 7 checks for each node (0 sub grid(s))
+Starting problem-list-generator pass(es)
+-----------------------------------
+Starting problem-list-generator pass 1 of 1
+way Map: uses SparseLong2IntMap
+coord Map: uses SparseLong2IntMap
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+coord Map: 3,399,577 stored long/int pairs require ca. 196 bytes per pair. 149,875 chunks are used, the avg. number of values in one 64-chunk is 22.
+coord Map details: ~635 MB, including 79 array(s) with 8 MB
+
+way Map: 396,009 stored long/int pairs require ca. 192 bytes per pair. 44,255 chunks are used, the avg. number of values in one 64-chunk is 8.
+way Map details: ~73 MB, including 9 array(s) with 8 MB
+
+
+  Number of stored area combis for nodes: 3,399,577
+  Number of stored area combis for ways: 396,009
+  Number of stored Integers for rels: 0
+  Number of stored combis in dictionary: 28
+  Number of detected problem ways: 1,805
+  Number of detected problem rels: 100
+  JVM Memory Info: Current 1788MB (1452MB used, 336MB free) Max 3072MB
+
+Problem-list-generator pass 1 took 2349 ms
+Problem-list-generator pass(es) took 2476 ms
+cached 5 combinations of areas that form rectangles.
+AreaGridTree [512][512] for grid area (37.529296875,-122.5634765625) to (37.96875,-122.2998046875) requires max. 3 checks for each node (0 sub grid(s))
+-----------------------------------
+Executing multi-tile analyses phase 1
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Stats for MultiTileProcessor pass 1
+  SparseBitSet problemRels contains now 100 Ids.
+  SparseBitSet neededWays contains now 1,805 Ids.
+  SparseBitSet mpWays contains now 0 Ids.
+  SparseBitSet neededNodes contains now 0 Ids.
+  Number of stored relations: 9,167
+  Number of stored tile combinations in multiTileDictionary: 15
+Status: Finished collecting relations.
+  JVM Memory Info: Current 1788MB (1521MB used, 267MB free) Max 3072MB
+starting to resolve relations containing problem relations ...
+Finished adding members of problem relations to problem lists.
+Stats for MultiTileProcessor pass 1
+  SparseBitSet neededWays contains now 2,320 Ids.
+  SparseBitSet mpWays contains now 333 Ids.
+  SparseBitSet neededNodes contains now 55 Ids.
+  Number of stored relations: 107
+  Number of stored tile combinations in multiTileDictionary: 15
+Status: starting to collect ids of needed way nodes ...
+Multi-tile analyses phase 1 took 113 ms
+-----------------------------------
+Executing multi-tile analyses phase 2
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Stats for MultiTileProcessor pass 2
+  SparseBitSet neededWays contains now 2,320 Ids.
+  SparseBitSet mpWays contains now 0 Ids.
+  SparseBitSet neededNodes contains now 39,718 Ids.
+  Number of stored relations: 107
+  Number of stored tile combinations in multiTileDictionary: 15
+Status: Finished collecting problem ways.
+Found 2,320 of 2,320 needed ways.
+Found 327 of 333 needed multipolygon ways.
+Stats for MultiTileProcessor pass 2
+  SparseBitSet neededWays contains now 2,320 Ids.
+  SparseBitSet mpWays contains now 0 Ids.
+  SparseBitSet neededNodes contains now 39,718 Ids.
+  Number of stored relations: 107
+  Number of stored tile combinations in multiTileDictionary: 15
+Status: Starting to collect coordinates for 39,718 needed nodes.
+  JVM Memory Info: Current 1788MB (435MB used, 1353MB free) Max 3072MB
+Multi-tile analyses phase 2 took 646 ms
+-----------------------------------
+Executing multi-tile analyses phase 3
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Found 39,718 of 39,718 needed nodes.
+  JVM Memory Info: Current 1788MB (638MB used, 1150MB free) Max 3072MB
+Calculating tiles for problem relations...
+Warning: Incomplete multipolygon relation 111968 (San Francisco): using bbox of unclosed polygon to calc tiles, ways: [404822064, 211532183, 211541668]
+Warning: Incomplete multipolygon relation 111968 (San Francisco): using bbox of unclosed polygon to calc tiles, ways: [211439308, 211439303, 211439304, 48995755, 778368437, 48995759, 211100070, 770806798, 720421139, 770932673, 770706077, 836580772, 836580775, 836580679, 157333716, 836580683, 173728742, 164960226, 775629592, 775148415, 158290769]
+Warning: Incomplete multipolygon relation 396498 (San Mateo County): using bbox of unclosed polygon to calc tiles, ways: [404822064, 211532183, 211541668]
+Warning: Incomplete multipolygon relation 2833529 (Emeryville): using bbox of unclosed polygon to calc tiles, ways: [236344193]
+Warning: Incomplete multipolygon relation 2833530 (Oakland): using bbox of unclosed polygon to calc tiles, ways: [802315853, 211439303, 33088355]
+Warning: Incomplete multipolygon relation 8841133 (Monterey Bay National Marine Sanctuary): using bbox of unclosed polygon to calc tiles, ways: [836580720, 173728741, 836580710, 836580713, 836580708, 836580704, 836580686, 836580695, 836580699]
+Warning: Incomplete multipolygon relation 8841133 (Monterey Bay National Marine Sanctuary): using bbox of unclosed polygon to calc tiles, ways: [39017763, 638329494, 638329491, 436603185, 41230544]
+Warning: Incomplete multipolygon relation 15058808 (CAL Fire San Mateo Santa Cruz Unit): using bbox of unclosed polygon to calc tiles, ways: [404822064, 211532183, 211541668]
+Warning: Incomplete multipolygon relation 15058911 (CAL Fire Santa Clara Unit): using bbox of unclosed polygon to calc tiles, ways: [211439308, 211439303, 211439304, 48995755, 778368437, 48995759]
+Stats for MultiTileProcessor pass 3
+  SparseBitSet neededWays contains now 2,320 Ids.
+  Number of stored tile combinations in multiTileDictionary: 20
+Status: Making sure that needed way nodes of relations are written to the correct tiles...
+Multi-tile analyses phase 3 took 1518 ms
+-----------------------------------
+Executing multi-tile analyses phase 4
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Stats for MultiTileProcessor pass 4
+  SparseBitSet neededWays contains now 2,320 Ids.
+  Number of stored tile combinations in multiTileDictionary: 20
+  nodeWriterMap contains 39,718 pairs.
+  wayWriterMap contains 2,320 pairs.
+  relWriterMap contains 107 pairs.
+Status: Finished processing problem lists.
+Multi-tile analyses phase 4 took 506 ms
+-----------------------------------
+Writing results of MultiTileAnalyser to temp files ...
+Wrote 39718 node pairs to /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/node2133935900101284586.tmp
+Wrote 2320 way pairs to /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/way16801234665019476284.tmp
+Wrote 107 rel pairs to /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/rel15824356717119387448.tmp
+Writing temp files took 29 ms
+Distributing data Mon Feb 06 07:03:20 UTC 2023
+Processing 5 areas in a single pass
+coord Map: uses SparseLong2IntMap
+way Map: uses SparseLong2IntMap
+Starting distribution pass 1 of 1, processing 5 areas (25590001 to 25590005)
+Processing /bbbike/tmp/osm2garmin-splitter.EjUMifu5.osm.pbf
+Bounding box -122.53999990000001 37.54 -122.31999990000001 37.93
+Writing ways Mon Feb 06 07:03:25 UTC 2023
+Writing relations Mon Feb 06 07:03:26 UTC 2023
+coord Map: 3,399,577 stored long/int pairs require ca. 196 bytes per pair. 149,875 chunks are used, the avg. number of values in one 64-chunk is 22.
+coord Map details: ~635 MB, including 79 array(s) with 8 MB
+
+way Map: 396,009 stored long/int pairs require ca. 192 bytes per pair. 44,255 chunks are used, the avg. number of values in one 64-chunk is 8.
+way Map details: ~73 MB, including 9 array(s) with 8 MB
+
+  JVM Memory Info: Current 1806MB (1439MB used, 367MB free) Max 3072MB
+Full Node tests:  85,157
+Quick Node tests: 3,357,147
+Thread worker-0 has finished
+Thread worker-1 has finished
+Distribution pass(es) took 6497 ms
+temporary file /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/node2133935900101284586.tmp was deleted
+temporary file /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/way16801234665019476284.tmp was deleted
+temporary file /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/rel15824356717119387448.tmp was deleted
+Time finished: Mon Feb 06 07:03:27 UTC 2023
+Total time taken: 15 seconds
+35.39user 2.90system 0:15.72elapsed 243%CPU (0avgtext+0avgdata 2146808maxresident)k
+0inputs+50272outputs (0major+573257minor)pagefaults 0swaps
+
+>>> Run mkgmap, map style: osm (UTF-8)
++ java -jar /var/lib/bbbike/opt/mkgmap/mkgmap.jar --version
+Mkgmap version 4905
+4905
++ time java -Xmx5G -jar /var/lib/bbbike/opt/mkgmap/mkgmap.jar --max-jobs=1 --keep-going --family-id=9551 --product-id=1 --remove-short-arcs --route --copyright-file=copyright.txt --license-file=license.txt --location-autofill=is_in,nearest --index --show-profiles=1 --make-opposite-cycleways --housenumbers --add-pois-to-areas --precomp-sea=/var/lib/bbbike/opt/share/garmin/sea --generate-sea=land-tag=natural=land --bounds=/var/lib/bbbike/opt/share/garmin/bounds --code-page=65001 --gmapsupp '--description=SanFrancisco osm/UTF-8 BBBike.org 06-Feb-2023' '--family-name=SanFrancisco     style=osm' /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/25590001.osm.pbf /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/25590002.osm.pbf /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/25590003.osm.pbf /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/25590004.osm.pbf /bbbike/tmp/pbf-splitter.tO3Ju1mnADm/split/25590005.osm.pbf
+Mkgmap version 4905
+Time started: Mon Feb 06 07:04:09 UTC 2023
+Number of MapFailedExceptions: 0
+Number of ExitExceptions: 0
+Time finished: Mon Feb 06 07:04:50 UTC 2023
+Total time taken: 41 seconds
+125.06user 3.80system 0:41.58elapsed 309%CPU (0avgtext+0avgdata 2117260maxresident)k
+0inputs+48104outputs (0major+595419minor)pagefaults 0swaps
